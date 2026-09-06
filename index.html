@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Амина — Кыз Узатуу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="petals" id="petals"></div>
+
+<!-- SCREEN 1 — HERO -->
+<section class="screen hero">
+  <svg class="branch branch--tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 4 C40 20, 60 40, 70 80 C78 110, 95 130, 130 140" stroke="currentColor" stroke-width="1"/>
+    <path d="M30 25 C40 18, 50 20, 55 30" stroke="currentColor" stroke-width="1"/>
+    <path d="M50 55 C62 48, 72 50, 78 60" stroke="currentColor" stroke-width="1"/>
+    <path d="M75 95 C88 90, 98 94, 103 104" stroke="currentColor" stroke-width="1"/>
+    <circle cx="55" cy="30" r="3" stroke="currentColor" stroke-width="1"/>
+    <circle cx="78" cy="60" r="3" stroke="currentColor" stroke-width="1"/>
+    <circle cx="103" cy="104" r="3" stroke="currentColor" stroke-width="1"/>
+  </svg>
+
+  <div class="hero__inner">
+    <p class="eyebrow">Кыз узатуу үчүн назик чакыруу</p>
+    <h1 class="hero__name">Амина</h1>
+    <div class="hero__rule"></div>
+    <p class="hero__date">2-октябрь · Анел Гранд</p>
+  </div>
+
+  <svg class="branch branch--br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M196 196 C160 180, 140 160, 130 120 C122 90, 105 70, 70 60" stroke="currentColor" stroke-width="1"/>
+    <path d="M170 175 C160 182, 150 180, 145 170" stroke="currentColor" stroke-width="1"/>
+    <path d="M150 145 C138 152, 128 150, 122 140" stroke="currentColor" stroke-width="1"/>
+    <path d="M125 105 C112 110, 102 106, 97 96" stroke="currentColor" stroke-width="1"/>
+    <circle cx="145" cy="170" r="3" stroke="currentColor" stroke-width="1"/>
+    <circle cx="122" cy="140" r="3" stroke="currentColor" stroke-width="1"/>
+    <circle cx="97" cy="96" r="3" stroke="currentColor" stroke-width="1"/>
+  </svg>
+
+  <div class="scrolldown" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- SCREEN 2 — COUNTDOWN -->
+<section class="screen countdown">
+  <p class="section-label">Күнгө чейин калды</p>
+  <div class="countdown__grid" id="countdown">
+    <div class="countdown__item">
+      <span class="countdown__num" id="cd-days">00</span>
+      <span class="countdown__unit">күн</span>
+    </div>
+    <div class="countdown__item">
+      <span class="countdown__num" id="cd-hours">00</span>
+      <span class="countdown__unit">саат</span>
+    </div>
+    <div class="countdown__item">
+      <span class="countdown__num" id="cd-min">00</span>
+      <span class="countdown__unit">мүнөт</span>
+    </div>
+    <div class="countdown__item">
+      <span class="countdown__num" id="cd-sec">00</span>
+      <span class="countdown__unit">секунд</span>
+    </div>
+  </div>
+  <p class="countdown__caption">Тою — 2026-жылдын 2-октябрында</p>
+</section>
+
+<!-- SCREEN 3 — ABOUT KYZ UZATUU -->
+<section class="screen about">
+  <div class="about__inner">
+    <p class="section-label">Аминанын ак жолуна</p>
+    <h2 class="about__title">Ак жол, Амина</h2>
+    <p class="about__text">
+      Аруу кызым, ак жоолук салынып,<br>
+      ата-энеңдин батасын алып,<br>
+      ак жол менен аттанар күнүңдө<br>
+      бактыңа бүт дүйнө кубансын.
+    </p>
+    <p class="about__text">
+      Кыз узатуу — жүрөккө толгон ыйык күн.<br>
+      Бул кубанычты жакындарыбыз менен бирге бөлүшөлү.
+    </p>
+  </div>
+  <svg class="leaf-divider" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 20 C40 5, 80 5, 110 20" stroke="currentColor" stroke-width="1"/>
+    <path d="M55 12 C58 18, 58 22, 55 28" stroke="currentColor" stroke-width="1"/>
+  </svg>
+</section>
+
+<!-- SCREEN 4 — LOCATION -->
+<section class="screen location">
+  <p class="section-label">Той өтө турган жер</p>
+  <h2 class="location__title">Анел Гранд</h2>
+  <p class="location__text">2-октябрь, Бишкек шаары</p>
+  <a class="location__btn" href="https://2gis.kg/bishkek/search/%D0%90%D0%BD%D0%B5%D0%BB%20%D0%B3%D1%80%D0%B0%D0%BD%D0%B4%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20/firm/70000001079817962/74.643226%2C42.822157?m=74.645771%2C42.821236%2F16.77&immersive=on" target="_blank" rel="noopener">
+    <span>2GIS-тен көрүү</span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- SCREEN 5 — RSVP -->
+<section class="screen rsvp">
+  <p class="section-label">Катышуу тууралуу билдирүү</p>
+  <h2 class="rsvp__title">Күтөбүз</h2>
+
+  <form id="rsvpForm" class="rsvp__form" novalidate>
+    <div class="field">
+      <label for="guestName">Атыңыз</label>
+      <input type="text" id="guestName" name="guestName" placeholder="Аты-жөнүңүз" autocomplete="name">
+    </div>
+
+    <div class="field">
+      <span class="field__label-text">Катышасызбы?</span>
+      <div class="radio-group">
+        <label class="radio-pill">
+          <input type="radio" name="attendance" value="Сөзсүз барам" checked>
+          <span>Сөзсүз барам</span>
+        </label>
+        <label class="radio-pill">
+          <input type="radio" name="attendance" value="Азырынча белгисиз">
+          <span>Азырынча белгисиз</span>
+        </label>
+        <label class="radio-pill">
+          <input type="radio" name="attendance" value="Барa албайм">
+          <span>Бара албайм</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="guestCount">Адам саны</label>
+      <div class="stepper">
+        <button type="button" class="stepper__btn" id="stepMinus" aria-label="Азайтуу">−</button>
+        <input type="text" id="guestCount" value="1" readonly inputmode="numeric">
+        <button type="button" class="stepper__btn" id="stepPlus" aria-label="Көбөйтүү">+</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="message">Каалоо-тилегиңиз</label>
+      <textarea id="message" name="message" rows="3" placeholder="Бул жерге жаза аласыз (милдеттүү эмес)"></textarea>
+    </div>
+
+    <p class="form-status" id="formStatus"></p>
+
+    <button type="submit" class="submit-btn">Жөнөтүү</button>
+  </form>
+
+  <div class="thank-you hidden" id="thankYou">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/><path d="M12 20.5L17 25.5L28 14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3>Рахмат!</h3>
+    <p>Сиздин жообуңуз кабыл алынды. 2-октябрда күтөбүз!</p>
+  </div>
+</section>
+
+<!-- SCREEN 6 — BLESSING -->
+<section class="screen blessing">
+  <svg class="branch branch--center" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 30 C40 10, 60 10, 80 30 C100 10, 120 10, 150 30" stroke="currentColor" stroke-width="1"/>
+    <circle cx="80" cy="30" r="3" stroke="currentColor" stroke-width="1"/>
+  </svg>
+  <p class="blessing__text">
+    Рахмат сиздерге, ушул кубанычтуу күндү биз менен бирге бөлүшкөнүңүз үчүн.
+    Аминага бак-таалай, ырыс-кешик, ынтымактуу үй-бүлө каалайбыз.
+    Ак жол, ак багыт, бактылуу жашоо каалайбыз.
+  </p>
+  <p class="blessing__from">— Амина менен үй-бүлөсү</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
