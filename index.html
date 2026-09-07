@@ -1,178 +1,427 @@
 <!DOCTYPE html>
 <html lang="ky">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Амина — Кыз Узатуу</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кыз узатуу тою</title>
+    <meta
+      name="description"
+      content="Кыз узатуу тоюна чакыруудагы сайт-приглашение."
+    />
+    <!-- Open Graph meta tags for WhatsApp & Telegram preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Кыз узатуу тоюна чакыруу — Амина" />
+    <meta property="og:description" content="Урматтуу коногубуз! Сизди кызыбыз Аминанын узатуу тоюна арналган салтанатка кадырлуу конок болуп кетүүгө чакырабыз! Тоюбуз 2-октябрда саат 12:00дө Anel Grand ресторанында өтөт." />
+    <meta property="og:locale" content="ky_KG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
 
-<div class="petals" id="petals"></div>
+    <!-- ============== REUSABLE EMBLEM: chandelier + corner flourish ============== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="chandelier-mark" viewBox="0 0 200 150">
+          <circle cx="100" cy="14" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="100" y1="17" x2="100" y2="34" stroke="currentColor" stroke-width="1"/>
+          <line x1="62" y1="34" x2="138" y2="34" stroke="currentColor" stroke-width="1"/>
+          <path d="M62 34 Q46 45 49 60" fill="none" stroke="currentColor" stroke-width="0.9"/>
+          <path d="M100 34 L100 68" stroke="currentColor" stroke-width="0.9"/>
+          <path d="M138 34 Q154 45 151 60" fill="none" stroke="currentColor" stroke-width="0.9"/>
+          <ellipse cx="49" cy="64" rx="3.6" ry="6.4" fill="currentColor" opacity="0.9"/>
+          <ellipse cx="100" cy="72" rx="3.6" ry="6.4" fill="currentColor" opacity="0.9"/>
+          <ellipse cx="151" cy="64" rx="3.6" ry="6.4" fill="currentColor" opacity="0.9"/>
+          <circle cx="100" cy="42" r="1.6" fill="currentColor" opacity="0.85"/>
+          <circle cx="100" cy="49" r="1.3" fill="currentColor" opacity="0.75"/>
+          <circle cx="100" cy="55" r="1" fill="currentColor" opacity="0.65"/>
+        </symbol>
+      </defs>
+    </svg>
 
-<!-- SCREEN 1 — HERO -->
-<section class="screen hero">
-  <svg class="branch branch--tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4 4 C40 20, 60 40, 70 80 C78 110, 95 130, 130 140" stroke="currentColor" stroke-width="1"/>
-    <path d="M30 25 C40 18, 50 20, 55 30" stroke="currentColor" stroke-width="1"/>
-    <path d="M50 55 C62 48, 72 50, 78 60" stroke="currentColor" stroke-width="1"/>
-    <path d="M75 95 C88 90, 98 94, 103 104" stroke="currentColor" stroke-width="1"/>
-    <circle cx="55" cy="30" r="3" stroke="currentColor" stroke-width="1"/>
-    <circle cx="78" cy="60" r="3" stroke="currentColor" stroke-width="1"/>
-    <circle cx="103" cy="104" r="3" stroke="currentColor" stroke-width="1"/>
-  </svg>
-
-  <div class="hero__inner">
-    <p class="eyebrow">Кыз узатуу үчүн назик чакыруу</p>
-    <h1 class="hero__name">Амина</h1>
-    <div class="hero__rule"></div>
-    <p class="hero__date">2-октябрь · Анел Гранд</p>
-  </div>
-
-  <svg class="branch branch--br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M196 196 C160 180, 140 160, 130 120 C122 90, 105 70, 70 60" stroke="currentColor" stroke-width="1"/>
-    <path d="M170 175 C160 182, 150 180, 145 170" stroke="currentColor" stroke-width="1"/>
-    <path d="M150 145 C138 152, 128 150, 122 140" stroke="currentColor" stroke-width="1"/>
-    <path d="M125 105 C112 110, 102 106, 97 96" stroke="currentColor" stroke-width="1"/>
-    <circle cx="145" cy="170" r="3" stroke="currentColor" stroke-width="1"/>
-    <circle cx="122" cy="140" r="3" stroke="currentColor" stroke-width="1"/>
-    <circle cx="97" cy="96" r="3" stroke="currentColor" stroke-width="1"/>
-  </svg>
-
-  <div class="scrolldown" aria-hidden="true">
-    <span></span>
-  </div>
-</section>
-
-<!-- SCREEN 2 — COUNTDOWN -->
-<section class="screen countdown">
-  <p class="section-label">Күнгө чейин калды</p>
-  <div class="countdown__grid" id="countdown">
-    <div class="countdown__item">
-      <span class="countdown__num" id="cd-days">00</span>
-      <span class="countdown__unit">күн</span>
-    </div>
-    <div class="countdown__item">
-      <span class="countdown__num" id="cd-hours">00</span>
-      <span class="countdown__unit">саат</span>
-    </div>
-    <div class="countdown__item">
-      <span class="countdown__num" id="cd-min">00</span>
-      <span class="countdown__unit">мүнөт</span>
-    </div>
-    <div class="countdown__item">
-      <span class="countdown__num" id="cd-sec">00</span>
-      <span class="countdown__unit">секунд</span>
-    </div>
-  </div>
-  <p class="countdown__caption">Тою — 2026-жылдын 2-октябрында</p>
-</section>
-
-<!-- SCREEN 3 — ABOUT KYZ UZATUU -->
-<section class="screen about">
-  <div class="about__inner">
-    <p class="section-label">Аминанын ак жолуна</p>
-    <h2 class="about__title">Ак жол, Амина</h2>
-    <p class="about__text">
-      Аруу кызым, ак жоолук салынып,<br>
-      ата-энеңдин батасын алып,<br>
-      ак жол менен аттанар күнүңдө<br>
-      бактыңа бүт дүйнө кубансын.
-    </p>
-    <p class="about__text">
-      Кыз узатуу — жүрөккө толгон ыйык күн.<br>
-      Бул кубанычты жакындарыбыз менен бирге бөлүшөлү.
-    </p>
-  </div>
-  <svg class="leaf-divider" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 20 C40 5, 80 5, 110 20" stroke="currentColor" stroke-width="1"/>
-    <path d="M55 12 C58 18, 58 22, 55 28" stroke="currentColor" stroke-width="1"/>
-  </svg>
-</section>
-
-<!-- SCREEN 4 — LOCATION -->
-<section class="screen location">
-  <p class="section-label">Той өтө турган жер</p>
-  <h2 class="location__title">Анел Гранд</h2>
-  <p class="location__text">2-октябрь, Бишкек шаары</p>
-  <a class="location__btn" href="https://2gis.kg/bishkek/search/%D0%90%D0%BD%D0%B5%D0%BB%20%D0%B3%D1%80%D0%B0%D0%BD%D0%B4%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20/firm/70000001079817962/74.643226%2C42.822157?m=74.645771%2C42.821236%2F16.77&immersive=on" target="_blank" rel="noopener">
-    <span>2GIS-тен көрүү</span>
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-</section>
-
-<!-- SCREEN 5 — RSVP -->
-<section class="screen rsvp">
-  <p class="section-label">Катышуу тууралуу билдирүү</p>
-  <h2 class="rsvp__title">Күтөбүз</h2>
-
-  <form id="rsvpForm" class="rsvp__form" novalidate>
-    <div class="field">
-      <label for="guestName">Атыңыз</label>
-      <input type="text" id="guestName" name="guestName" placeholder="Аты-жөнүңүз" autocomplete="name">
+    <!-- Soft falling gold light animation -->
+    <div class="particles-container" aria-hidden="true">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+      <div class="particle particle-7"></div>
+      <div class="particle particle-8"></div>
+      <div class="particle particle-9"></div>
+      <div class="particle particle-10"></div>
     </div>
 
-    <div class="field">
-      <span class="field__label-text">Катышасызбы?</span>
-      <div class="radio-group">
-        <label class="radio-pill">
-          <input type="radio" name="attendance" value="Сөзсүз барам" checked>
-          <span>Сөзсүз барам</span>
-        </label>
-        <label class="radio-pill">
-          <input type="radio" name="attendance" value="Азырынча белгисиз">
-          <span>Азырынча белгисиз</span>
-        </label>
-        <label class="radio-pill">
-          <input type="radio" name="attendance" value="Барa албайм">
-          <span>Бара албайм</span>
-        </label>
+    <div class="petals-container" aria-hidden="true">
+      <span class="petal petal-1"></span>
+      <span class="petal petal-2"></span>
+      <span class="petal petal-3"></span>
+      <span class="petal petal-4"></span>
+      <span class="petal petal-5"></span>
+      <span class="petal petal-6"></span>
+    </div>
+
+    <div class="glow-orbs" aria-hidden="true">
+      <span class="glow-orb glow-orb-1"></span>
+      <span class="glow-orb glow-orb-2"></span>
+      <span class="glow-orb glow-orb-3"></span>
+    </div>
+
+    <div class="light-sweep" aria-hidden="true"></div>
+
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <div class="background-decor" aria-hidden="true">
+      <div class="background-botanical">
+        <svg class="botanical-svg" viewBox="0 0 280 820" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="stemTone" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#866342" stop-opacity=".78" />
+              <stop offset="1" stop-color="#c5a77b" stop-opacity=".58" />
+            </linearGradient>
+            <linearGradient id="leafTone" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ead8b9" stop-opacity=".74" />
+              <stop offset=".46" stop-color="#c6a979" stop-opacity=".58" />
+              <stop offset="1" stop-color="#8f6b42" stop-opacity=".26" />
+            </linearGradient>
+            <radialGradient id="flowerTone" cx="38%" cy="30%" r="72%">
+              <stop offset="0" stop-color="#fffdf7" stop-opacity=".96" />
+              <stop offset=".62" stop-color="#ead9bb" stop-opacity=".82" />
+              <stop offset="1" stop-color="#b99461" stop-opacity=".42" />
+            </radialGradient>
+            <filter id="botanicalSoft" x="-25%" y="-25%" width="150%" height="150%">
+              <feGaussianBlur stdDeviation=".18" />
+            </filter>
+          </defs>
+          <g fill="none" stroke="url(#stemTone)" stroke-linecap="round">
+            <path d="M35 830 C42 670 56 500 96 318 C118 220 130 125 143 42" stroke-width="2.2" />
+            <path d="M40 780 C22 618 18 446 35 294 C44 205 58 129 72 78" stroke-width="1.4" />
+            <path d="M46 735 C95 588 142 453 202 334 C224 289 239 238 247 181" stroke-width="1.45" />
+            <path d="M77 430 C133 362 180 292 214 204" stroke-width="1.05" />
+            <path d="M95 324 C58 274 42 220 33 166" stroke-width="1" />
+            <path d="M58 640 C116 548 176 480 236 424" stroke-width="1.15" />
+            <path d="M84 505 C47 463 27 415 17 365" stroke-width=".9" />
+            <path d="M117 254 C167 203 199 142 218 87" stroke-width=".95" />
+          </g>
+          <g fill="url(#leafTone)" stroke="none" filter="url(#botanicalSoft)">
+            <path d="M41 745 C10 727 6 695 9 678 C39 685 55 706 41 745Z" />
+            <path d="M48 688 C77 663 101 665 116 674 C95 698 72 703 48 688Z" />
+            <path d="M55 614 C25 593 16 566 19 548 C48 553 65 572 55 614Z" />
+            <path d="M64 548 C92 525 117 529 130 539 C108 560 84 562 64 548Z" />
+            <path d="M73 470 C46 446 43 420 48 405 C74 413 87 438 73 470Z" />
+            <path d="M86 402 C111 382 132 385 144 395 C125 415 103 418 86 402Z" />
+            <path d="M101 335 C80 307 83 285 91 273 C112 288 118 310 101 335Z" />
+            <path d="M119 275 C141 253 161 255 172 264 C155 283 136 288 119 275Z" />
+            <path d="M137 206 C120 183 123 162 130 151 C149 166 153 185 137 206Z" />
+            <path d="M169 386 C192 363 214 365 224 375 C206 394 186 398 169 386Z" />
+            <path d="M76 575 C108 552 136 555 151 568 C127 590 99 592 76 575Z" />
+            <path d="M118 501 C91 477 88 451 96 437 C122 450 132 477 118 501Z" />
+            <path d="M150 456 C177 431 202 432 216 443 C194 465 170 469 150 456Z" />
+            <path d="M184 302 C160 278 161 253 170 242 C193 258 199 281 184 302Z" />
+            <path d="M203 226 C226 205 248 207 260 218 C241 237 220 239 203 226Z" />
+          </g>
+          <g fill="none" stroke="#9c774b" stroke-opacity=".34" stroke-width=".7" stroke-linecap="round">
+            <path d="M18 686 C31 699 36 716 40 738" />
+            <path d="M52 687 C75 683 94 678 111 674" />
+            <path d="M24 556 C37 571 48 589 54 607" />
+            <path d="M68 548 C89 545 111 541 127 539" />
+            <path d="M51 411 C61 430 69 450 72 466" />
+            <path d="M89 402 C108 399 126 396 141 395" />
+            <path d="M94 278 C98 296 100 316 100 331" />
+            <path d="M122 274 C140 270 156 266 169 264" />
+            <path d="M80 578 C102 575 125 570 147 568" />
+            <path d="M120 498 C111 477 105 458 98 440" />
+            <path d="M153 456 C174 451 196 446 213 443" />
+            <path d="M185 299 C177 280 173 261 171 244" />
+            <path d="M206 225 C226 222 244 219 258 218" />
+          </g>
+          <g fill="url(#flowerTone)" stroke="#b18a58" stroke-opacity=".42" stroke-width=".55" opacity=".9" filter="url(#botanicalSoft)">
+            <g transform="translate(142 42)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(72 78) scale(.76)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(214 204) scale(.72)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(33 166) scale(.66)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(202 334) scale(.6)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(236 424) scale(.82)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(17 365) scale(.58)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+            <g transform="translate(218 87) scale(.72)"><circle r="7"/><circle cx="10" cy="-3" r="5"/><circle cx="-8" cy="-5" r="5"/><circle cx="3" cy="9" r="5"/><circle cx="-4" cy="7" r="4"/><circle r="2" fill="#b88f5d"/></g>
+          </g>
+        </svg>
+      </div>
+      <div class="background-ornament">
+        <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ornamentGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#9c7138" />
+              <stop offset=".48" stop-color="#d0a45e" />
+              <stop offset="1" stop-color="#9a6d35" />
+            </linearGradient>
+            <filter id="ornamentShadow" x="-20%" y="-30%" width="140%" height="160%">
+              <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#9a713d" flood-opacity=".18" />
+            </filter>
+          </defs>
+          <g fill="none" stroke="url(#ornamentGold)" stroke-linecap="round" filter="url(#ornamentShadow)">
+            <path d="M380 95 C350 92 337 75 315 67 C270 51 222 63 183 91 C154 112 121 119 83 111" stroke-width="2" />
+            <path d="M380 95 C410 92 423 75 445 67 C490 51 538 63 577 91 C606 112 639 119 677 111" stroke-width="2" />
+            <path d="M380 95 L380 22" stroke-width="1.7" />
+            <path d="M83 111 C65 108 51 111 38 119" stroke-width="1.2" />
+            <path d="M677 111 C695 108 709 111 722 119" stroke-width="1.2" />
+          </g>
+          <g fill="url(#ornamentGold)" filter="url(#ornamentShadow)">
+            <circle cx="380" cy="95" r="5" />
+            <circle cx="380" cy="22" r="4" />
+          </g>
+          <g fill="#c99b55" opacity=".92" filter="url(#ornamentShadow)">
+            <path d="M282 62 C268 42 253 39 239 43 C249 58 263 66 282 62Z" />
+            <path d="M267 73 C248 69 234 76 227 88 C243 91 258 86 267 73Z" />
+            <path d="M224 65 C212 47 198 43 186 48 C195 62 208 68 224 65Z" />
+            <path d="M207 79 C190 74 176 80 169 92 C184 94 198 89 207 79Z" />
+            <path d="M153 94 C143 77 130 72 118 77 C127 91 139 97 153 94Z" />
+            <path d="M135 105 C119 100 106 106 99 117 C113 120 126 115 135 105Z" />
+            <path d="M478 62 C492 42 507 39 521 43 C511 58 497 66 478 62Z" />
+            <path d="M493 73 C512 69 526 76 533 88 C517 91 502 86 493 73Z" />
+            <path d="M536 65 C548 47 562 43 574 48 C565 62 552 68 536 65Z" />
+            <path d="M553 79 C570 74 584 80 591 92 C576 94 562 89 553 79Z" />
+            <path d="M607 94 C617 77 630 72 642 77 C633 91 621 97 607 94Z" />
+            <path d="M625 105 C641 100 654 106 661 117 C647 120 634 115 625 105Z" />
+          </g>
+          <g fill="none" stroke="#a8793e" stroke-opacity=".58" stroke-width=".7">
+            <path d="M380 95 C350 92 337 75 315 67 C270 51 222 63 183 91 C154 112 121 119 83 111" />
+            <path d="M380 95 C410 92 423 75 445 67 C490 51 538 63 577 91 C606 112 639 119 677 111" />
+          </g>
+        </svg>
       </div>
     </div>
 
-    <div class="field">
-      <label for="guestCount">Адам саны</label>
-      <div class="stepper">
-        <button type="button" class="stepper__btn" id="stepMinus" aria-label="Азайтуу">−</button>
-        <input type="text" id="guestCount" value="1" readonly inputmode="numeric">
-        <button type="button" class="stepper__btn" id="stepPlus" aria-label="Көбөйтүү">+</button>
+    <!-- Envelope Overlay -->
+    <div class="envelope-overlay" aria-hidden="true">
+      <div class="envelope-container">
+        <div class="envelope-scene">
+          <div class="envelope-body">
+            <div class="envelope-body-texture"></div>
+            <div class="envelope-body-fold left"></div>
+            <div class="envelope-body-fold right"></div>
+          </div>
+
+          <div class="envelope-letter">
+            <svg class="letter-emblem" viewBox="0 0 200 150"><use href="#chandelier-mark"/></svg>
+            <p class="letter-title">Аминанын Кыз узатуу тоюна</p>
+            <p class="letter-sub">чакыруу</p>
+          </div>
+
+          <div class="envelope-flap"></div>
+
+          <div class="envelope-ribbon">
+            <span class="ribbon-loop left"></span>
+            <span class="ribbon-loop right"></span>
+            <span class="ribbon-knot"></span>
+            <span class="ribbon-tail left"></span>
+            <span class="ribbon-tail right"></span>
+          </div>
+
+          <div class="wax-seal">
+            <div class="seal-circle"></div>
+            <svg class="seal-mark" viewBox="0 0 200 150"><use href="#chandelier-mark"/></svg>
+            <div class="seal-monogram">Амина</div>
+          </div>
+        </div>
+
+        <p class="envelope-hint">Ачуу үчүн басыңыз</p>
       </div>
     </div>
 
-    <div class="field">
-      <label for="message">Каалоо-тилегиңиз</label>
-      <textarea id="message" name="message" rows="3" placeholder="Бул жерге жаза аласыз (милдеттүү эмес)"></textarea>
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="header-ornament">
+          <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" class="ornament-svg">
+            <!-- Left flourish -->
+            <path d="M20 40 Q30 20 50 15 Q60 13 70 20" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+            <!-- Center diamond -->
+            <circle cx="100" cy="40" r="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.8"/>
+            <circle cx="100" cy="40" r="3" fill="currentColor" opacity="0.6"/>
+            <!-- Right flourish -->
+            <path d="M180 40 Q170 20 150 15 Q140 13 130 20" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          </svg>
+        </div>
+        <h2 class="header-title">Чакыруу кат / Приглашение</h2>
+      </div>
+    </header>
+
+    <!-- Intro / Cover Screen -->
+    <div class="intro-screen" aria-hidden="true">
+      <div class="cover-card">
+        <div class="cover-frame">
+          <div class="cover-ornament cover-ornament-left"></div>
+          <div class="cover-ornament cover-ornament-right"></div>
+          <svg class="cover-emblem" viewBox="0 0 200 150"><use href="#chandelier-mark"/></svg>
+          <h1 class="cover-title">Кыз узатуу тоюна чакыруу</h1>
+          <p class="cover-subtitle">Амина</p>
+          <div class="cover-date">2-октябрь 2026-жыл, саат 12:00</div>
+          <button class="open-btn" type="button">Ачуу</button>
+        </div>
+      </div>
     </div>
 
-    <p class="form-status" id="formStatus"></p>
+    <div class="page-shell">
+      <main class="content">
+        <section class="card hero reveal">
+          <svg class="hero-emblem" viewBox="0 0 200 150"><use href="#chandelier-mark"/></svg>
+          <div class="line-decoration line-top"></div>
+          <h2>Амина кыз узатуу</h2>
+          <p class="hero-date">2-октябрь 2026-жыл | саат 12:00 |</p>
+          <br> Anel Grand рестораны
+          <div class="hero-details">
+            <span>🕛 12:00 башталышы</span>
+            <span>💝 АК батаңызды күтөбүз</span>
+          </div>
+          <div class="line-decoration line-bottom"></div>
+        </section>
 
-    <button type="submit" class="submit-btn">Жөнөтүү</button>
-  </form>
+        <section class="card poetry-card reveal">
+          <div class="poem-text">
+            Аруузатым, үмүтүмдүн тамыры,<br />
+            Асылзатым, эртеңимдин жарыгы,<br />
+            Назик кызым, сулуу кызым, периштем,<br />
+            Жараткандан тилейм сенин бактыңды.
+          </div>
+        </section>
 
-  <div class="thank-you hidden" id="thankYou">
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/><path d="M12 20.5L17 25.5L28 14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <h3>Рахмат!</h3>
-    <p>Сиздин жообуңуз кабыл алынды. 2-октябрда күтөбүз!</p>
-  </div>
-</section>
+        <section class="card poetry-card reveal">
+          <div class="poem-text">
+            Аздектеп кызды чоңойтуу,<br />
+            Ата-эненин парзы экен.<br />
+            Бой жетсе кызды узатуу,<br />
+            Эзелтен келген салт экен.<br />
+            Барктап келген улуу салттуу элибиз,<br />
+            Кыз узатуу аземине келиңиз.<br />
+            Салтанаттуу ак дасторкон үстүндө,<br />
+            Бакыт каалап батаңызды бериңиз!
+          </div>
+        </section>
 
-<!-- SCREEN 6 — BLESSING -->
-<section class="screen blessing">
-  <svg class="branch branch--center" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 30 C40 10, 60 10, 80 30 C100 10, 120 10, 150 30" stroke="currentColor" stroke-width="1"/>
-    <circle cx="80" cy="30" r="3" stroke="currentColor" stroke-width="1"/>
-  </svg>
-  <p class="blessing__text">
-    Рахмат сиздерге, ушул кубанычтуу күндү биз менен бирге бөлүшкөнүңүз үчүн.
-    Аминага бак-таалай, ырыс-кешик, ынтымактуу үй-бүлө каалайбыз.
-    Ак жол, ак багыт, бактылуу жашоо каалайбыз.
-  </p>
-  <p class="blessing__from">— Амина менен үй-бүлөсү</p>
-</section>
+        <section class="card blessing reveal">
+          <div class="blessing-text">
+            Урматтуу коноктор!<br />
+            Сиздерди, кызыбыз Аминанын<br />
+            кыз узатуу аземине арналган салтанаттуу ак дасторкон үстүндө кадырлуу коногубуз болуп, ак батаңыздарды берип кетүүгө чакырабыз!
+          </div>
+        </section>
 
-<script src="script.js"></script>
-</body>
+        <section class="card countdown reveal">
+          <div class="section-head">
+            <svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" fill="#c2a172"/>
+            </svg>
+            <h3>Тойго чейин калган убакыт</h3>
+          </div>
+
+          <div class="countdown-grid" aria-label="Таймер до свадьбы">
+            <div class="time-box">
+              <span id="days">00</span>
+              <small>Күндөр</small>
+            </div>
+            <div class="time-box">
+              <span id="hours">00</span>
+              <small>Саат</small>
+            </div>
+            <div class="time-box">
+              <span id="minutes">00</span>
+              <small>Мүнөт</small>
+            </div>
+            <div class="time-box">
+              <span id="seconds">00</span>
+              <small>Секунд</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="card location reveal">
+          <div class="section-head">
+            <svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" fill="#c2a172"/>
+            </svg>
+            <h3>Той өтүүчү дарек</h3>
+          </div>
+
+          <p class="location-name">Anel Grand рестораны</p>
+          <a
+            class="map-button"
+            href="https://2gis.kg/bishkek/search/%D0%90%D0%BD%D0%B5%D0%BB%20%D0%B3%D1%80%D0%B0%D0%BD%D0%B4%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20/firm/70000001079817962/74.643226%2C42.822157?m=74.655052%2C42.817293%2F14.67&immersive=on"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🗺️ 2GIS / Картадан көрүү
+          </a>
+        </section>
+
+        <section class="card rsvp reveal" hidden>
+          <div class="section-head">
+            <svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm-5.04-6.71l-2.75 3.54-2.12-2.12-1.41 1.41L11.21 17l4.12-5.29z" fill="#c2a172"/>
+            </svg>
+            <h3>Катышууңузду ырастаңыз</h3>
+          </div>
+
+          <form id="rsvpForm" novalidate>
+            <div class="field-group">
+              <label for="guestName">Сиздин аты-жөнүңүз <span>*</span></label>
+              <input id="guestName" name="guestName" type="text" placeholder="Атыңызды жазыңыз" required />
+            </div>
+
+            <div class="field-group guest-fields">
+              <label>Келүүчү адамдардын саны <span>*</span></label>
+              <div class="guest-counter" aria-label="Келүүчү адамдардын саны">
+                <button class="counter-btn minus" type="button" aria-label="Азайтуу">−</button>
+                <span class="counter-value" aria-live="polite">2</span>
+                <button class="counter-btn plus" type="button" aria-label="Көбөйтүү">+</button>
+              </div>
+              <input type="hidden" id="guestCount" name="guestCount" value="2" />
+            </div>
+
+            <div class="field-group">
+              <label>Тойго келе аласызбы? <span>*</span></label>
+              <div class="radio-group" role="radiogroup" aria-label="Катышуу">
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Ооба, келем" checked />
+                  <span>Ооба, келем</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Азырынча билбейм" />
+                  <span>Азырынча билбейм</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Тилекке каршы, келе албайм" />
+                  <span>Тилекке каршы, келе албайм</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="message">Каалоо-тилектериңиз</label>
+              <textarea id="message" name="message" rows="4" placeholder="Жаштарга ак каалооңузду калтырыңыз..."></textarea>
+            </div>
+
+            <p id="formStatus" class="status-message" aria-live="polite"></p>
+            <button class="submit-btn" type="submit">Жөнөтүү</button>
+          </form>
+
+          <div id="thankYou" class="thank-you hidden" aria-live="polite">
+            <h4>Рахмат! Сиздин жообуңуз кабыл алынды.</h4>
+          </div>
+          <p class="hosts-signature">Сиздерди терең урматтоо менен той ээлери Нурбек & Махабат</p>
+        </section>
+      </main>
+    </div>
+
+    <div class="copy-toast" id="copyToast" aria-live="polite">✓ Номер көчүрүлдү!</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
